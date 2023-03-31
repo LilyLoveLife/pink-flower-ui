@@ -1,2 +1,2 @@
-# lily-component-library
+# pink-ui
 A react component library
