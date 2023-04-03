@@ -4,7 +4,7 @@
  * @Author: 
  * @Date: 2023-04-02 22:54:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-04-02 23:09:14
+ * @LastEditTime: 2023-04-04 00:53:55
  */
 import React, {useState} from 'react'
 import classNames from 'classnames'
@@ -22,4 +22,15 @@ const Button = (props: IButtonProps) => {
         // },
         className
     )
+    const InternalButton = (props, ref) => {
+        const {
+            loading = false,
+            type = 'default',
+            size: customizeSize,
+            disabled: customDisabled,
+            className,
+            
+        } = props
+    }
+    return React.forwardRef(InternalButton)
 }
