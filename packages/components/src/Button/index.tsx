@@ -4,33 +4,37 @@
  * @Author: 
  * @Date: 2023-04-02 22:54:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-04-04 00:53:55
+ * @LastEditTime: 2023-05-07 17:41:45
  */
 import React, {useState} from 'react'
 import classNames from 'classnames'
+import styles from './index.module.scss'
+import {Button} from 'antd'
 
 interface IButtonProps {
     className?: string
 }
 
-const Button = (props: IButtonProps) => {
+const PinkButton = (props: IButtonProps, ref: any) => {
     const {className} = props
-    const iconClasses = classNames(
-        // iconPrefixCls,
-        // {
-        //   [`${iconPrefixCls}-${sizeCls}`]: sizeCls,
-        // },
-        className
-    )
-    const InternalButton = (props, ref) => {
-        const {
-            loading = false,
-            type = 'default',
-            size: customizeSize,
-            disabled: customDisabled,
-            className,
+    // const iconClasses = classNames(
+    //     // iconPrefixCls,
+    //     // {
+    //     //   [`${iconPrefixCls}-${sizeCls}`]: sizeCls,
+    //     // },
+    //     className
+    // )
+    // const InternalButton = (props: any, ref: any) => {
+    //     const {
+    //         loading = false,
+    //         type = 'default',
+    //         size: customizeSize,
+    //         disabled: customDisabled,
+    //         className,
             
-        } = props
-    }
-    return React.forwardRef(InternalButton)
+    //     } = props
+    //     return <Button {...props} ref={ref}></Button>
+    // }
+    return <Button {...props} className={styles.pink}></Button>
 }
+export default React.forwardRef(PinkButton)

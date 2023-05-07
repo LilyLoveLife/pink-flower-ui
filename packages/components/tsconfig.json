@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "components": ["index.ts"],
+      "components/es/*": ["*"],
+      "components/lib/*": ["*"],
+      // "antd/locale/*": ["locale/*"]
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],

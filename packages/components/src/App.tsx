@@ -1,7 +1,16 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2023-04-02 20:44:48
+ * @LastEditors: 
+ * @LastEditTime: 2023-05-07 18:46:23
+ */
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './Button'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <div>
+        <Button>Pink Button</Button>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
