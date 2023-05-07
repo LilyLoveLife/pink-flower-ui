@@ -7,6 +7,7 @@
       "components/lib/*": ["*"],
       // "antd/locale/*": ["locale/*"]
     },
+    // "types": "dist/index.d.ts",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
