@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/pink-ui.js",
-  "style": "./dist/style.css",
   "types": "./src/index.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
