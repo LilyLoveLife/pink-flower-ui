@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "src/index.d.ts",
-  "types": "src/index.ts",
+  "main": "./dist/pink-ui.js",
+  "types": "./src/index.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
@@ -16,8 +16,7 @@
     "only-allow": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2"
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
