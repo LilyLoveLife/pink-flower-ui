@@ -3,8 +3,8 @@
  * @version: 
  * @Author: 
  * @Date: 2023-05-26 01:34:44
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-05-26 01:42:02
+ * @LastEditors: Lily lily.song@hrtps.com
+ * @LastEditTime: 2023-05-26 14:16:19
  */
 import {
     defineConfig, presetAttributify, presetIcons,
@@ -19,10 +19,12 @@ shortcuts: {
   'h-btn': 'h-48px w-100% bg-#5C33BE b-none text-white rounded-8px'
 },
 safelist: [],
-
   presets: [
     presetUno(),
-    presetAttributify(),
+    presetAttributify({
+      prefix: 'un-',
+      prefixedOnly: true,
+    }),
     presetIcons({
       extraProperties: { 'display': 'inline-block', 'vertical-align': 'middle' },
     }),
