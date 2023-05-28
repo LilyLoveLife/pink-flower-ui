@@ -2,7 +2,6 @@
   "name": "@pink-ui/examples",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
@@ -12,6 +11,7 @@
   },
   "dependencies": {
     "@pink-ui/components": "workspace:^",
+    "babel-plugin-component": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

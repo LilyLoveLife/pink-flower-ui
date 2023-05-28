@@ -1,0 +1,29 @@
+
+
+.customSelectPopup {
+    // z-index: 10;
+    &:global {
+        &.ant-select-dropdown .ant-select-item {
+            line-height: 22PX;
+        }
+    }
+}
+.customSelect {
+    &:global {
+        &.ant-select .ant-select-selector {
+            border-radius: 2PX;
+        }
+        &.ant-select .ant-select-arrow {
+            color: #dde0e8;
+        }
+        &.ant-select .ant-select-arrow .anticon >svg {
+            color: #dde0e8;
+        }
+        &.ant-select-suffix {
+            svg {
+                // color: #595959;
+                color: #dde0e8;
+            }
+        }
+    }
+}
