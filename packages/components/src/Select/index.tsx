@@ -3,13 +3,12 @@
  * @version: 
  * @Author: 
  * @Date: 2023-05-28 15:21:00
- * @LastEditors: 
- * @LastEditTime: 2023-05-28 15:21:49
+ * @LastEditors: Lily lily.song@hrtps.com
+ * @LastEditTime: 2023-05-29 19:24:28
  */
 import React from 'react'
 import { Select as AntDSelect } from 'antd'
 import { SelectProps } from 'antd/lib/select'
-import Sel from 'antd/lib/select'
 import styles from './index.module.scss'
 import classNames from 'classnames'
 
