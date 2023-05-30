@@ -3,8 +3,8 @@
  * @version: 
  * @Author: 
  * @Date: 2023-05-07 17:20:52
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-05-29 01:07:07
+ * @LastEditors: Lily lily.song@hrtps.com
+ * @LastEditTime: 2023-05-30 19:41:32
  */
 import React , { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -12,14 +12,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // import Button from '../../components/src/Button'
 //import Button from '@pink-ui/components/dist/Button'
-import {Button} from '@pink-ui/components'
+import {Button, Select} from '@pink-ui/components'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <Button>example my Pink Button</Button>
+        {/* <Button>example my Pink Button</Button> */}
+        <Select></Select>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
