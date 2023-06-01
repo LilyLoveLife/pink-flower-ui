@@ -7,15 +7,19 @@ export default function myPlugin() {
             //     [chunkName1]: bundler1
             //     [chunkName2]: bundler2
             // }
-            const chunkNameList = Object.keys(allBundle)
-            for (let chunkName of chunkNameList) {
+            const keys = Object.keys(allBundle)
+            for (let chunkName of keys) {
                 if (chunkName.endsWith('.js')) {
-                    const bundler = bundleObj[chunkName]
+                    console.log('--chunkNames----', keys)
+                    console.log('--allBundle[chunkName]----', JSON.stringify(allBundle[chunkName]))
+                    const bundler = allBundle[chunkName]
+                    const moduleName = bundler.facadeModuleId
                     this.emitFile({
                         type: 'asset',
                         fileName: chunkName,
-                        source: `import './index.css'
-                        ${bundler.code}
+                        // @pink-ui/components/dist/es/Button/index.css
+                        // source: `import '@pink-ui/components/dist/es/Button/index.css'
+                        source: `import './index.css'\n${bundler.code}
                         `
                     })
                 }
