@@ -39,7 +39,7 @@ export const config: UserConfigWithOutDir = {
     lib: {
       entry: './src/allEntry.ts',
       name: 'PinkUI',
-      formats: ['es', 'umd', 'iife', 'cjs'],
+      formats: ['es'], // , 'umd', 'iife', 'cjs'
       fileName: 'pink-ui'
     },
     rollupOptions: {
