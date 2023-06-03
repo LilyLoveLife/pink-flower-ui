@@ -15,7 +15,7 @@ importers:
     dependencies:
       '@rollup/plugin-typescript':
         specifier: ^11.1.1
-        version: registry.npmmirror.com/@rollup/plugin-typescript@11.1.1(typescript@4.9.3)
+        version: registry.npmmirror.com/@rollup/plugin-typescript@11.1.1(tslib@2.5.3)(typescript@4.9.3)
       classnames:
         specifier: ^2.3.2
         version: registry.npmmirror.com/classnames@2.3.2
@@ -40,6 +40,9 @@ importers:
       sass:
         specifier: ^1.62.1
         version: registry.npmmirror.com/sass@1.62.1
+      tslib:
+        specifier: ^2.5.3
+        version: registry.npmmirror.com/tslib@2.5.3
     devDependencies:
       '@types/lodash':
         specifier: ^4.14.195
@@ -1271,7 +1274,7 @@ packages:
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmmirror.com/@rollup/plugin-typescript@11.1.1(typescript@4.9.3):
+  registry.npmmirror.com/@rollup/plugin-typescript@11.1.1(tslib@2.5.3)(typescript@4.9.3):
     resolution: {integrity: sha512-Ioir+x5Bejv72Lx2Zbz3/qGg7tvGbxQZALCLoJaGrkNXak/19+vKgKYJYM3i/fJxvsb23I9FuFQ8CUBEfsmBRg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@rollup/plugin-typescript/-/plugin-typescript-11.1.1.tgz}
     id: registry.npmmirror.com/@rollup/plugin-typescript/11.1.1
     name: '@rollup/plugin-typescript'
@@ -1289,6 +1292,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': registry.npmmirror.com/@rollup/pluginutils@5.0.2
       resolve: registry.npmmirror.com/resolve@1.22.1
+      tslib: registry.npmmirror.com/tslib@2.5.3
       typescript: registry.npmmirror.com/typescript@4.9.3
     dev: false
 
@@ -1846,7 +1850,7 @@ packages:
       mime: registry.npmmirror.com/mime@1.4.1
       react: registry.npmmirror.com/react@16.14.0
       react-refresh: registry.npmmirror.com/react-refresh@0.10.0
-      react-router: registry.npmmirror.com/react-router@5.2.0(react@16.14.0)
+      react-router: registry.npmmirror.com/react-router@5.2.0(react@18.2.0)
       react-router-config: registry.npmmirror.com/react-router-config@5.1.1(react-router@5.2.0)(react@16.14.0)
       react-router-dom: registry.npmmirror.com/react-router-dom@5.2.0(react@16.14.0)
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime@0.13.5
@@ -9731,7 +9735,7 @@ packages:
     name: rxjs
     version: 7.8.1
     dependencies:
-      tslib: registry.npmmirror.com/tslib@2.5.2
+      tslib: registry.npmmirror.com/tslib@2.5.3
     dev: true
 
   registry.npmmirror.com/safe-buffer@5.1.2:
@@ -10591,11 +10595,10 @@ packages:
     version: 1.14.1
     dev: true
 
-  registry.npmmirror.com/tslib@2.5.2:
-    resolution: {integrity: sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.5.2.tgz}
+  registry.npmmirror.com/tslib@2.5.3:
+    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.5.3.tgz}
     name: tslib
-    version: 2.5.2
-    dev: true
+    version: 2.5.3
 
   registry.npmmirror.com/tsutils@3.21.0(typescript@5.0.2):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsutils/-/tsutils-3.21.0.tgz}
