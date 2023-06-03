@@ -20,7 +20,8 @@
     "lodash": "^4.17.21",
     "only-allow": "^1.1.1",
     "path": "^0.12.7",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "tslib": "^2.5.3"
   },
   "peerDependencies": {
     "react": "^18.2.0",
