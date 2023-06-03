@@ -4,7 +4,7 @@
  * @Author: 
  * @Date: 2023-05-07 17:20:52
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-03 23:08:18
+ * @LastEditTime: 2023-06-03 23:15:04
  */
 import React , { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -23,9 +23,9 @@ function App() {
   return (
     <>
       <div>
-        {/* <Button>example my Pink Button</Button> */}
-        <Select placeholder='一定要选择' options={options}>
-        </Select>
+        <Button>example my Pink Button</Button>
+        {/* <Select placeholder='一定要选择' options={options}>
+        </Select> */}
         {/* <Select placeholder='一定要选择'>
           <Select.Option value={1}>选项1</Select.Option>
           <Select.Option value={2}>选项2</Select.Option>
