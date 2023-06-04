@@ -8,7 +8,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production pnpm build:components",
+    "build": "cross-env NODE_ENV=production pnpm build:all",
     "build:components": "esno ./scripts/esBuild.ts",
     "build:all": "tsc && vite build",
     "preview": "vite preview"

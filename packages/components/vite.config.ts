@@ -1,80 +1,67 @@
-/*
- * @Author: Lily lily.song@hrtps.com
- * @Date: 2023-05-08 11:29:24
- * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-06-01 19:44:08
- * @FilePath: /theseus-cooperation/Users/hrtps/Documents/Projects/pink-ui/packages/components/vite.config.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
-import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
+import { defineConfig } from "vite";
 import react from '@vitejs/plugin-react'
-import { visualizer } from "rollup-plugin-visualizer"
-// import { UserConfig } from "vitest"
-import UnoCSS from 'unocss/vite'
-import { presetUno, presetAttributify, presetIcons } from "unocss"
-import InjectImportCss from './plugins/InjectImportCss'
+import path from 'path'
 
-// type UserConfigWithOutDir = UserConfig & 
-// export type getBuildType<Config> = 'build' extends keyof UserConfig
-//                             ? Config extends {build: infer TBuild}
-//                               ? TBuild extends {outDir: infer TOutDir} ? TBuild : TBuild & {outDir: string}
-//                               : (TBuild & {outDir: string})
-//                             : {outDir: string}
-export type TBuildType = BuildOptions & {outDir: string}
-export type UserConfigWithOutDir = UserConfig & {build: TBuildType}
-// UserConfig & getBuildType<UserConfig>
-export const config: UserConfigWithOutDir = {
-  plugins: [
-    react(),
-    UnoCSS(),
-    visualizer() as PluginOption,
-    InjectImportCss(),
-    // UnoCSS({
-    //   presets: [presetUno(), presetAttributify(), presetIcons()]  // ?
-    // }),
-  ],
-  optimizeDeps: {
-    exclude: ['fsevents'],
-  },
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+// 获取 __filename 的 ESM 写法
+const __filename = fileURLToPath(import.meta.url)
+// 获取 __dirname 的 ESM 写法
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const resolvePath = (str: string) => path.resolve(__dirname, str);
+
+
+export default defineConfig({
   build: {
-    target: 'ESNext',
-    sourcemap: true,
+    //打包文件目录
+    outDir: "es",
+    //压缩
+    //minify: false,
     lib: {
-      entry: './src/allEntry.ts',
-      name: 'PinkUI',
-      formats: ['es'], // , 'umd', 'iife', 'cjs'
-      fileName: 'pink-ui'
+        entry: resolvePath('./src/esEntry.ts'),
+        //name: "PinkUI",
+        //fileName: format => `index.js`,
     },
     rollupOptions: {
+      //忽略打包vue文件
       external: ['react', 'react-dom', 'classnames', 'antd'],
-      output: {
-        globals: {
-          react: 'React',
-          ['react-dom']: 'react-dom',
-          classnames: 'classnames',
-          antd: 'antd'
-        },
-        extend: true,
-        format: 'es',
-        assetFileNames: () => 'index.css'
-      },
-      treeshake: {
-        moduleSideEffects: [
-          "build/es/**/style/*",
-          "build/lib/**/style/*",
-          "build/es/**/*.css",
-          "build/es/**/*.scss",
-          "*.css",
-          "*.less"
-        ]
-      },
-    },
-    // optimizeDeps: {
-    //   exclude: ['fevent']
-    // },
-    outDir: './dist',
+      input: ["./src/esEntry.ts"],
+      output: [
+        {
 
+          //打包格式
+          format: "es",
+          //打包后文件名
+          entryFileNames: "[name]",
+          //让打包目录和我们目录对应
+          preserveModules: true,
+          exports: "named",
+          assetFileNames: () => 'index.css',
+          //配置打包根目录
+          dir: "./dist/es",
+          extend: true,
+          preserveModulesRoot: "src", // 将保留的模块放在根级别的此路径下
+          globals: {
+            react: 'React',
+            ['react-dom']: 'react-dom',
+            classnames: 'classnames',
+            antd: 'antd'
+          },
+        },
+        {
+          //打包格式
+          format: "cjs",
+          //打包后文件名
+          entryFileNames: "[name].cjs.js",
+          //让打包目录和我们目录对应
+          preserveModules: true,
+          exports: "named",
+          //配置打包根目录
+          dir: "./dist/lib",
+        },
+      ],
+    }
   },
-}
-// https://vitejs.dev/config/
-export default defineConfig(config)
+  plugins: [react()],
+});
