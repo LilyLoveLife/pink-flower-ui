@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import UnoCSS from 'unocss/vite'
+
 
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'node:path'
@@ -13,31 +15,41 @@ const resolvePath = (str: string) => path.resolve(__dirname, str);
 
 
 export default defineConfig({
+  optimizeDeps: {
+    exclude: ['fsevents'],
+  },
   build: {
+    target: 'ESNext',
+    sourcemap: true,
     //打包文件目录
     outDir: "es",
     //压缩
     //minify: false,
     lib: {
-        entry: resolvePath('./src/esEntry.ts'),
+      entry: ['./src/Button', './src/Select'],
+        // entry:'./src/esEntry.ts', //  resolvePath(
+        // formats: ['es'], // rollupOptions里面配置了，所以这里会被忽略
         //name: "PinkUI",
         //fileName: format => `index.js`,
     },
     rollupOptions: {
-      //忽略打包vue文件
+      //忽略打包
       external: ['react', 'react-dom', 'classnames', 'antd'],
-      input: ["./src/esEntry.ts"],
+      // input: ["./src/esEntry.ts"],
       output: [
         {
 
           //打包格式
           format: "es",
           //打包后文件名
-          entryFileNames: "[name]",
+          entryFileNames: "[name].js",
           //让打包目录和我们目录对应
           preserveModules: true,
           exports: "named",
-          assetFileNames: () => 'index.css',
+          // assetFileNames: () => 'index.css',
+          // assetFileNames: '[ext]/[name]-[hash].[ext]',
+          assetFileNames: '[name]-[hash].[ext]',
+          chunkFileNames: "[name]-[hash]-chunk.js",
           //配置打包根目录
           dir: "./dist/es",
           extend: true,
@@ -61,7 +73,20 @@ export default defineConfig({
           dir: "./dist/lib",
         },
       ],
+      treeshake: {
+        moduleSideEffects: [
+          "build/es/**/style/*",
+          "build/lib/**/style/*",
+          "build/es/**/*.css",
+          "build/es/**/*.scss",
+          "*.css",
+          "*.less"
+        ]
+      },
     }
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    UnoCSS(),
+  ],
 });
