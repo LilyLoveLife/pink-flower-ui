@@ -1,8 +1,8 @@
 /*
  * @Author: Lily lily.song@hrtps.com
  * @Date: 2023-05-08 11:29:24
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-04 02:47:39
+ * @LastEditors: Lily lily.song@hrtps.com
+ * @LastEditTime: 2023-06-05 15:18:47
  * @FilePath: /theseus-cooperation/Users/hrtps/Documents/Projects/pink-ui/packages/components/vite.config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -33,6 +33,7 @@ export type UserConfigWithOutDir = UserConfig & {build: TBuildType}
 // UserConfig & getBuildType<UserConfig>
 export const config: UserConfigWithOutDir = {
   plugins: [
+    // typescript({}),
     react(),
     UnoCSS(),
     visualizer() as PluginOption,
@@ -67,7 +68,7 @@ export const config: UserConfigWithOutDir = {
     rollupOptions: {    
       external: ['react', 'react-dom', 'classnames', 'antd'],
       output: {
-        dir: path.dirname('./dist'),
+        dir: './dist',
         format: 'es',
         globals: {
           react: 'React',
@@ -76,8 +77,9 @@ export const config: UserConfigWithOutDir = {
           antd: 'antd'
         },
         extend: true,
-        exports: 'named',
-        preserveModules: true,
+        // exports: 'named',
+        // preserveModules: true,
+        // entryFileNames: '[name].js',
        //  preserveModulesRoot: "./dist", // 将保留的模块放在根级别的此路径下
         //format: 'es',
         //dir: './dist',
@@ -94,11 +96,12 @@ export const config: UserConfigWithOutDir = {
         ]
       },
       plugins: [
-        // typescript({
-        //   outDir: path.dirname('./dist'),
-        //   declaration: true,
-        //   declarationDir: path.dirname('./dist'),
-        // }),
+        // typescript({}),
+
+        // outDir:'./dist/types',
+        // declaration: true,
+        // declarationDir: './dist/types',
+      
       ],
     },
     // optimizeDeps: {
