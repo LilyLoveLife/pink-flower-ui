@@ -4,7 +4,7 @@
  * @Author: 
  * @Date: 2023-05-28 15:21:00
  * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-06-01 15:31:54
+ * @LastEditTime: 2023-06-02 10:26:57
  */
 import { Select as AntDSelect } from 'antd'
 import { SelectProps } from 'antd/lib/select'
@@ -20,11 +20,12 @@ const PinkSelect = (props: SelectProps) => {
   // </AntDSelect>
   const { className: customClassName, popupClassName: customPopupClassName, children, ...otherProps }: any = props
   let defaultClassName = cs({
-      pinkSelect: true,
-    [styles.customSelect]: true,
+      [styles.pinkSelect]: true,
+      [styles['border-pink']]: true,
+      [styles.customSelect]: true,
   })
   const className = customClassName ? `${defaultClassName} ${customClassName}` : defaultClassName
-  return <AntDSelect className={className} {...otherProps}>{children}</AntDSelect>
+  return <AntDSelect placeholder={ props.placeholder || '请选择'} className={className} {...otherProps}>{children}</AntDSelect>
 
   // const { className: customClassName, popupClassName: customPopupClassName, children, ...otherProps }: any = props
   //   let defaultClassName = classNames({

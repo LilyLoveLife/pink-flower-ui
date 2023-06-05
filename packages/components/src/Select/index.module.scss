@@ -2,6 +2,14 @@ $pink: pink;
 .pinkSelect {
     color: $pink;
 }
+.border-pink {
+    // border-color: $pink;
+    :global {
+        .ant-select-selector {
+            border-color: $pink;
+        }
+    }
+}
 .customSelectPopup {
     // z-index: 10;
     &:global {

@@ -4,7 +4,7 @@
  * @Author: 
  * @Date: 2023-04-02 22:54:11
  * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-05-30 21:16:28
+ * @LastEditTime: 2023-06-02 10:22:10
  */
 import React, {useState} from 'react'
 import cs from 'classnames'
@@ -30,13 +30,13 @@ const PinkButton = (props: IProps, ref: any) => {
       const { className: customClassName, type, ...otherProps }: any = props
      let defaultClassName = cs({
         [styles.customBtn]: true,
-        // [styles['border-pink']]: true,
+        [styles['border-pink']]: true,
         // [styles.login]: type === 'login',
         'color-pink-400': true
     })
     const className = customClassName ? `${defaultClassName} ${customClassName}` : defaultClassName
 
-  return <Button className={className} {...otherProps}></Button>
+  return <Button placeholder={ props.placeholder || '请输入'} className={className} {...otherProps}></Button>
     // const { className: customClassName, type, ...otherProps }: any = props
     // const iconClasses = classNames(
     //     // iconPrefixCls,
