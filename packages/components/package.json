@@ -11,7 +11,6 @@
     "build:components": "esno ./scripts/esBuild.ts",
     "build:all": "tsc && vite build",
     "preview": "vite preview",
-    "commit": "commit",
     "prettier": "prettier --write --ext .js,.jsx,.d.ts,.tsx,.json,.css,.scss,less src/",
     "eslint": "eslint --fix --ext .js,.jsx,.d.ts,.tsx,.json src/",
     "prepare": "cd ../.. && husky install packages/components/.husky"
