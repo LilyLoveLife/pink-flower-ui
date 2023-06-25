@@ -4,7 +4,7 @@ import viteLogo from "../../../../../../../../vite.svg";
 import "./App.css";
 import Button from "./Button";
 
-const [count7, setCount2] = useState(0);
+const [count6, setCount2] = useState(0);
 const App = () => {
   const [count, setCount] = useState(0);
 
