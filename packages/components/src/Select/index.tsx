@@ -18,7 +18,7 @@ const PinkSelect: any = (props: SelectProps) => {
       [styles.pinkSelect]: true,
   })
   const className = customClassName ? `${defaultClassName} ${customClassName}` : defaultClassName
-  return <AntDSelect className={className} placeholder="请选择" {...otherProps}></AntDSelect>
+  return <AntDSelect className={className} placeholder='请选择' {...otherProps}></AntDSelect>
 }
 PinkSelect.Option = AntDSelect.Option
 PinkSelect.OptGroup = AntDSelect.OptGroup
