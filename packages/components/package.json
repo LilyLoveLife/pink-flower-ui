@@ -50,6 +50,12 @@
     "unocss": "^0.52.3",
     "vite": "^4.2.0"
   },
+  "eslintConfig": {
+		"extends": [
+			"pink",
+			"plugin:prettier/recommended"
+		]
+	},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
