@@ -13,7 +13,7 @@
     "build:components": "esno ./scripts/esBuild.ts",
     "build:all": "tsc && vite build",
     "preview": "vite preview",
-    "commit": "git-cz"
+    "commit": "commit"
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^11.1.1",

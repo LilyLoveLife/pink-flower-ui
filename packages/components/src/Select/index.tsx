@@ -4,13 +4,15 @@
  * @Author: 
  * @Date: 2023-05-28 15:21:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-25 16:00:24
+ * @LastEditTime: 2023-06-25 17:21:49
  */
 import { Select as AntDSelect } from 'antd'
 import { SelectProps } from 'antd/lib/select'
 import styles from './index.module.scss'
 import cs from 'classnames'
 import lodash from 'lodash'
+import { Button } from 'antd'
+
 const PinkSelect: any = (props: SelectProps) => {
   props.className = 'test'
   const { className: customClassName, popupClassName: customPopupClassName,  ...otherProps }: any = props // children,
@@ -18,7 +20,7 @@ const PinkSelect: any = (props: SelectProps) => {
       [styles.pinkSelect]: true,
   })
   const className = customClassName ? `${defaultClassName} ${customClassName}` : defaultClassName
-  return <AntDSelect data-id='6' className={className} placeholder='请选择' {...otherProps}></AntDSelect>
+  return <AntDSelect data-name='test' className={className} placeholder='请选择' {...otherProps}></AntDSelect>
 }
 PinkSelect.Option = AntDSelect.Option
 PinkSelect.OptGroup = AntDSelect.OptGroup
