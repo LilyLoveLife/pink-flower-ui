@@ -1,27 +1,25 @@
-
 $pink: pink;
 
 .pinkBtn {
-    border-color: $pink;
+  border-color: $pink;
 }
 .pinkBtn {
-    &:global {
-		&.ant-btn {
-			box-shadow: unset;
-		}
-		border-radius: 2PX;
-		&.ant-btn-primary:disabled {
-			background-color: #EDEEF1;
-			color: #BEBEBE;
-			border-color: transparent;
-		}
-		&.ant-btn-default:disabled {
-			background: #FAFAFA;
-			color: #BEBEBE;
-		}
-		&.ant-btn-primary {
-			box-shadow: unset;
-		}
-		
-	}
+  &:global {
+    &.ant-btn {
+      box-shadow: unset;
+    }
+    border-radius: 2px;
+    &.ant-btn-primary:disabled {
+      background-color: #edeef1;
+      color: #bebebe;
+      border-color: transparent;
+    }
+    &.ant-btn-default:disabled {
+      background: #fafafa;
+      color: #bebebe;
+    }
+    &.ant-btn-primary {
+      box-shadow: unset;
+    }
+  }
 }

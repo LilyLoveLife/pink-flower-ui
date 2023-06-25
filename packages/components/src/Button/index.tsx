@@ -1,33 +1,42 @@
 /*
- * @Description: 
- * @version: 
- * @Author: 
+ * @Description:
+ * @version:
+ * @Author:
  * @Date: 2023-04-02 22:54:11
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-03 23:09:59
+ * @LastEditTime: 2023-06-25 19:49:52
  */
-import React, {useState} from 'react'
-import cs from 'classnames'
-import styles from './index.module.scss'
+import React from "react";
+import cs from "classnames";
 
-import {Button} from 'antd'
-import { ButtonProps, ButtonType } from 'antd/lib/button'
+import { Button } from "antd";
+import { ButtonProps, ButtonType } from "antd/lib/button";
+import styles from "./index.module.scss";
 
-interface IProps extends Omit<ButtonProps, 'type'> {
-    type?: 'login' | ButtonType
+interface IProps extends Omit<ButtonProps, "type"> {
+  type?: "login" | ButtonType; // type: login 为登录相关页面定制按钮样式
 }
 
-const PinkButton = (props: IProps, ref: any) => {
-      const { className: customClassName, type, ...otherProps }: any = props
-     let defaultClassName = cs({
-        [styles.pinkBtn]: true,
-        'color-pink-400': true
-    })
-    const className = customClassName ? `${defaultClassName} ${customClassName}` : defaultClassName
+const PinkButton = (props: IProps, ref?: any) => {
+  const { className: customClassName, type, ...otherProps }: IProps = props;
+  const defaultClassName = cs({
+    [styles.pinkBtn]: true,
+    "color-pink-400": true,
+    [styles.login]: type === "login",
+  });
+  const className = customClassName
+    ? `${defaultClassName} ${customClassName}`
+    : defaultClassName;
 
-  return <Button placeholder='请输入' className={className} {...otherProps}></Button>
-}
-PinkButton.Group = Button.Group
-export default PinkButton
-// Object.assign(PinkButton, Button)
-// export default React.forwardRef(PinkButton)
+  return (
+    <Button
+      ref={ref}
+      type={type === "login" ? "default" : type}
+      placeholder="请输入"
+      className={className}
+      {...otherProps}
+    />
+  );
+};
+PinkButton.Group = Button.Group;
+export default React.forwardRef(PinkButton);

@@ -4,9 +4,9 @@
  * @Author: 
  * @Date: 2023-06-24 23:57:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-25 15:07:27
+ * @LastEditTime: 2023-06-25 18:33:21
  */
-//   .eslintrc.cjs
+//   .eslintrc.js
 module.exports =   {
     extends: ["pink"],
     root: true,

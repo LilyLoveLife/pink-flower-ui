@@ -1,29 +1,29 @@
 $pink: pink;
 
 .customSelectPopup {
-    &:global {
-        &.ant-select-dropdown .ant-select-item {
-            line-height: 22PX;
-        }
+  &:global {
+    &.ant-select-dropdown .ant-select-item {
+      line-height: 22px;
     }
+  }
 }
 .pinkSelect {
-    &:global {
-        &.ant-select .ant-select-selector {
-            border-radius: 2PX;
-            border-color: $pink;
-        }
-        &.ant-select .ant-select-arrow {
-            color: $pink;
-        }
-        &.ant-select .ant-select-arrow .anticon >svg {
-            color: $pink;
-        }
-        &.ant-select-suffix {
-            svg {
-                // color: #dde0e8;
-                color: $pink;
-            }
-        }
+  &:global {
+    &.ant-select .ant-select-selector {
+      border-radius: 2px;
+      border-color: $pink;
     }
+    &.ant-select .ant-select-arrow {
+      color: $pink;
+    }
+    &.ant-select .ant-select-arrow .anticon > svg {
+      color: $pink;
+    }
+    &.ant-select-suffix {
+      svg {
+        // color: #dde0e8;
+        color: $pink;
+      }
+    }
+  }
 }
