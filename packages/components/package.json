@@ -6,6 +6,7 @@
   "module": "./dist/es/index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "precommit": "lint-staged",
     "dev": "vite",
     "build": "cross-env NODE_ENV=production pnpm build:components",
     "build:components": "esno ./scripts/esBuild.ts",
