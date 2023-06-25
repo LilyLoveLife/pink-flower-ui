@@ -4,15 +4,14 @@
  * @Author: 
  * @Date: 2023-05-28 15:21:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-25 14:57:04
+ * @LastEditTime: 2023-06-25 15:06:44
  */
 import { Select as AntDSelect } from 'antd'
 import { SelectProps } from 'antd/lib/select'
 import styles from './index.module.scss'
 import cs from 'classnames'
-import lodash from 'lodash'
-
 const PinkSelect: any = (props: SelectProps) => {
+  props.test = 1
   const { className: customClassName, popupClassName: customPopupClassName,  ...otherProps }: any = props // children,
   let defaultClassName = cs({
       [styles.pinkSelect]: true,
