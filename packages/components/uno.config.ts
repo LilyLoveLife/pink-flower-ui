@@ -1,11 +1,4 @@
-/*
- * @Description: 
- * @version: 
- * @Author: 
- * @Date: 2023-05-26 01:34:44
- * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-05-26 14:16:19
- */
+
 import {
     defineConfig, presetAttributify, presetIcons,
     presetTypography, presetUno, transformerAttributifyJsx

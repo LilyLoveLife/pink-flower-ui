@@ -1,15 +1,14 @@
 /*
  * @Author: Lily lily.song@hrtps.com
  * @Date: 2023-05-29 10:04:46
- * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-06-05 19:50:18
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-06-24 23:32:56
  * @FilePath: /theseus-cooperation/Users/hrtps/Documents/Projects/pink-ui/packages/components/scripts/esBuild.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 
 import fs from "fs-extra"
 import path from "path"
-// import {config, UserConfigWithOutDir} from "../vite.config"
 import {config} from "../vite.config.module"
 
 import { build, InlineConfig, defineConfig, UserConfig } from "vite"
@@ -24,15 +23,11 @@ const moduleNames: string[] = []
 const buildAll = async () => {
 
     const srcDir = path.resolve(__dirname, "../src/");
-    // console.log('--srcDir---', srcDir)
     fs.readdirSync(srcDir)
         .filter((name) => {
-            // console.log('--name1---', name)
             // 只要目录不要文件，且里面包含index.ts
             const componentDir = path.resolve(srcDir, name);
             const isDir = fs.lstatSync(componentDir).isDirectory();
-            // console.log('--isDir---', isDir)
-            // console.log('--componentDir---', componentDir)
             return isDir && fs.readdirSync(componentDir).includes("index.tsx");
         })
         .map((name) => {
@@ -56,26 +51,22 @@ const buildAll = async () => {
             // const eachBuild ={...config.build, ...custom}
             // const eachConfig = {...config, build: eachBuild}
             // //onsole.log('--eachConfig---', JSON.stringify(eachConfig))
-            // // console.log('--eachConfig---', eachConfig)
+            // console.log('--eachConfig---', eachConfig)
             const configObj = config(name)
+            console.log('--configObj---', configObj)
             await build(defineConfig(configObj as UserConfig) as InlineConfig);
         });
         console.log('-moduleNames--', moduleNames)
         const indexContent: string = moduleNames.reduce((pre: string, cur: string) => {
-            return `    ${pre}
-                        export { default as ${cur} } from './${cur}'
+            return `${pre}
+                    export { default as ${cur} } from './${cur}'
                     `
         }, '')
-        // console.log('---config.build.outDir---', config?.build?.outDir)
         fs.outputFile(
                 path.resolve('./dist/es', `index.js`),
                 indexContent,
                 `utf-8`
             );
-        
-
-
-    
 };
 
 buildAll();

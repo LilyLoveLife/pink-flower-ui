@@ -1,11 +1,3 @@
-/*
- * @Author: Lily lily.song@hrtps.com
- * @Date: 2023-05-08 11:29:24
- * @LastEditors: Lily lily.song@hrtps.com
- * @LastEditTime: 2023-06-05 15:18:47
- * @FilePath: /theseus-cooperation/Users/hrtps/Documents/Projects/pink-ui/packages/components/vite.config.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import { visualizer } from "rollup-plugin-visualizer"
@@ -14,14 +6,6 @@ import UnoCSS from 'unocss/vite'
 import { presetUno, presetAttributify, presetIcons } from "unocss"
 import InjectImportCss from './plugins/InjectImportCss'
 import typescript from '@rollup/plugin-typescript'
-import path from "path"
-import { fileURLToPath } from 'node:url'
-import { dirname } from 'node:path'
-// 获取 __filename 的 ESM 写法
-const __filename = fileURLToPath(import.meta.url)
-// 获取 __dirname 的 ESM 写法
-const __dirname = dirname(fileURLToPath(import.meta.url))
-
 // type UserConfigWithOutDir = UserConfig & 
 // export type getBuildType<Config> = 'build' extends keyof UserConfig
 //                             ? Config extends {build: infer TBuild}
@@ -33,14 +17,19 @@ export type UserConfigWithOutDir = UserConfig & {build: TBuildType}
 // UserConfig & getBuildType<UserConfig>
 export const config: UserConfigWithOutDir = {
   plugins: [
-    // typescript({}),
+    // typescript({
+    //     rootDir: `./src`, // 项目根目录，如果这里分模块打包，则根目录变成模块入口
+    //     outDir:`./dist/lib`,
+    //     declaration: true,
+    //     declarationDir: `./dist/lib`,
+    // }),
     react(),
     UnoCSS(),
     visualizer() as PluginOption,
     InjectImportCss(),
-    // UnoCSS({
-    //   presets: [presetUno(), presetAttributify(), presetIcons()]  // ?
-    // }),
+    UnoCSS({
+      presets: [presetUno(), presetAttributify(), presetIcons()]  // ?
+    }),
   ],
   optimizeDeps: {
     exclude: ['fsevents'],
@@ -62,14 +51,15 @@ export const config: UserConfigWithOutDir = {
     lib: {
       entry: './src/esEntry.ts',
       name: 'PinkUI',
-      formats: ['es'], // , 'umd', 'iife', 'cjs'
-      fileName: 'pink-ui',
+      formats: ['cjs'], // , 'umd', 'iife', 'cjs'
+      // fileName: 'pink-ui',
+      fileName: 'index',
     },
     rollupOptions: {    
       external: ['react', 'react-dom', 'classnames', 'antd'],
       output: {
-        dir: './dist',
-        format: 'es',
+        dir: './dist/lib',
+        format: 'cjs',
         globals: {
           react: 'React',
           ['react-dom']: 'react-dom',
@@ -77,12 +67,6 @@ export const config: UserConfigWithOutDir = {
           antd: 'antd'
         },
         extend: true,
-        // exports: 'named',
-        // preserveModules: true,
-        // entryFileNames: '[name].js',
-       //  preserveModulesRoot: "./dist", // 将保留的模块放在根级别的此路径下
-        //format: 'es',
-        //dir: './dist',
         assetFileNames: () => 'index.css'
       },
       treeshake: {
@@ -95,21 +79,11 @@ export const config: UserConfigWithOutDir = {
           "*.less"
         ]
       },
-      plugins: [
-        // typescript({}),
-
-        // outDir:'./dist/types',
-        // declaration: true,
-        // declarationDir: './dist/types',
-      
-      ],
+      plugins: [],
     },
-    // optimizeDeps: {
-    //   exclude: ['fevent']
-    // },
-    outDir: './dist',
-
+    outDir: './dist/lib',
   },
 }
+console.log(1111111)
 // https://vitejs.dev/config/
 export default defineConfig(config)
