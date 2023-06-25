@@ -2,4 +2,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm run --no -- commitlint --edit "$1"
+cd packages
+cd components
+pnpm --no -- commitlint --edit "$1"

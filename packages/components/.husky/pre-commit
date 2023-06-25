@@ -5,4 +5,4 @@
 # echo git commit trigger husky pre-commit hook
 cd packages
 cd components
-pnpm lint-staged
+pnpm run lint-staged

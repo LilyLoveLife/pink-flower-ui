@@ -19,3 +19,6 @@
 
 
 // "precommit": "lint-staged",
+
+// pnpm --no -- commitlint --edit "$1"
+
