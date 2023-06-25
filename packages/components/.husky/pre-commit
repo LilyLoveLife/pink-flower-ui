@@ -2,5 +2,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo git commit trigger husky pre-commit hook
+# echo git commit trigger husky pre-commit hook
+cd packages
+cd components
 pnpm run lint-staged
