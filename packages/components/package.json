@@ -14,7 +14,7 @@
     "preview": "vite preview",
     "prettier": "prettier --write --ext .js,.jsx,.d.ts,.tsx,.json,.css,.scss,less src/",
     "eslint": "eslint --fix --ext .js,.jsx,.d.ts,.tsx,.json src/",
-    "prepare": "cd ../.. && husky install packages/components/.husky"
+    "prepare": "cd ../.. && husky install ./packages/components/.husky"
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^11.1.1",
