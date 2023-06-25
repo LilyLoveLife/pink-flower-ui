@@ -22,3 +22,4 @@
 
 // pnpm --no -- commitlint --edit "$1"
 
+// "prepare": "cd .. && cd .. && husky install packages/components/.husky"

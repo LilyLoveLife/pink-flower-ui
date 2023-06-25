@@ -13,8 +13,7 @@
     "build:all": "tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier --write --ext .js,.jsx,.d.ts,.tsx,.json,.css,.scss,less src/",
-    "eslint": "eslint --fix --ext .js,.jsx,.d.ts,.tsx,.json src/",
-    "prepare": "cd .. && cd .. && husky install packages/components/.husky"
+    "eslint": "eslint --fix --ext .js,.jsx,.d.ts,.tsx,.json src/"
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^11.1.1",
