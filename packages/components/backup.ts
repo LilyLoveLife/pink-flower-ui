@@ -8,3 +8,14 @@
 //                             : {outDir: string}
 
 // UserConfig & getBuildType<UserConfig>
+
+
+// "husky": {
+//     "hooks": {
+//       "pre-commit": "lint-staged",
+//       "commit-msg": "commitlint -e $GIT_PARAMS"
+//     }
+//   },
+
+
+// "precommit": "lint-staged",
