@@ -2,4 +2,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd packages/components && npm run lint-staged 
+# cd packages/components && pnpm run lint-staged 
+pnpm run precommit:components
