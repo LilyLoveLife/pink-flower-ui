@@ -5,5 +5,6 @@ nav:
 ---
 
 # 快速上手
-
-Balabala...
+  ### npm add pink-ui --save
+  ### yarn add pink-ui --save
+  ### pnpm add pink-ui --save

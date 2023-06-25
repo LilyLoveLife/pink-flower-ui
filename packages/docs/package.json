@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "dumi-app",
+  "name": "pink-ui",
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
@@ -27,7 +27,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@pink-ui/components": "workspace:^0.0.0",
+    "@pink-ui/components": "workspace:^0.0.1",
     "react": "^18.2.0"
   }
 }
