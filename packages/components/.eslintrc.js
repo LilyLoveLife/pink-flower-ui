@@ -4,11 +4,11 @@
  * @Author: 
  * @Date: 2023-06-24 23:57:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-25 14:55:25
+ * @LastEditTime: 2023-06-25 15:07:27
  */
 //   .eslintrc.cjs
 module.exports =   {
-    extends: ["link"],
+    extends: ["pink"],
     root: true,
     env: {
       browser: true,
