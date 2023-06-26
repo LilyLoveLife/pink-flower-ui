@@ -26,3 +26,10 @@
 
 // "prepare": "husky install",
 // "precommit:components": "cd packages/components && pnpm run lint-staged"
+
+// "config": {
+//     "commitizen": {
+//       "path": "./node_modules/cz-customizable"
+      
+//     }
+//   }
