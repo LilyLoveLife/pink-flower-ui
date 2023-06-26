@@ -23,3 +23,6 @@
 // pnpm --no -- commitlint --edit "$1"
 
 // "prepare": "cd .. && cd .. && husky install packages/components/.husky"
+
+// "prepare": "husky install",
+// "precommit:components": "cd packages/components && pnpm run lint-staged"
