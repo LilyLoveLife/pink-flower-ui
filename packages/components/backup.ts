@@ -33,3 +33,5 @@
       
 //     }
 //   }
+
+// git commit --no-verify -m "xxx"
