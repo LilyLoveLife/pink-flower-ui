@@ -35,3 +35,5 @@
 //   }
 
 // git commit --no-verify -m "xxx"
+
+// "jest --bail --coverage --findRelatedTests"
