@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render default 1`] = `
+<div>
+  <button
+    class="ant-btn css-dev-only-do-not-override-ed5zg0 ant-btn-default color-pink-400"
+    placeholder="请输入"
+    type="button"
+  />
+</div>
+`;
