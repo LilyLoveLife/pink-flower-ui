@@ -1,6 +1,6 @@
 {
-  "name": "pink-ui",
-  "version": "1.0.0",
+  "name": "pink-flower-ui",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "only-allow": "^1.1.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "husky": "^8.0.0"
   }
 }

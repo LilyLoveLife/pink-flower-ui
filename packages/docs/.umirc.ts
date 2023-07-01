@@ -1,26 +1,4 @@
-/*
- * @Description: 
- * @version: 
- * @Author: 
- * @Date: 2023-05-26 01:44:41
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-25 21:52:54
- */
-// import { defineConfig } from 'dumi';
-
-// export default defineConfig({
-//   title: 'Pink-UI',
-//   // mode: 'site',
-//   mode: 'doc',
-//   // more config: https://d.umijs.org/config
-// });
-
-
 import { defineConfig } from 'dumi';
-
-// :root {
-//   /* --theme-color: #5a80c0; */
-// }
 
 const style = `
 :root {
@@ -30,23 +8,19 @@ const style = `
 
 export default defineConfig({
   styles: [style],
-  base: '/docs/',
-  outputPath: 'docs',
-  publicPath: '/docs/',
-
+  base: '/docs1/', // 路由前缀，部署到非根目录时需要配置
+  outputPath: 'docs', // 打包生成文件路径，绝对地址
+  publicPath: '/docs2/', // 静态资源文件路径
   resolve: {
-    atomDirs: [
-      { type: 'components', dir: 'components' },
-    ],
+    atomDirs: [{ type: 'components', dir: 'components' }],
+    includes: ['./src'],
   },
-
-  themeConfig: {
-    name: 'Pink-UI',
-    logo: '',
-    nav: [
-      { title: '指南', link: '/getting-started' },
-      { title: '组件', link: '/Button' },
-      { title: '历史版本', link: '/version' },
-    ],
-  },
+ // favicon: 'public/icon.png',
+  // logo: 'icon.png',
+  navs: [
+    { title: '指南', link: '/getting-started' },
+    { title: '组件', link: '/components/button' },
+    { title: '历史版本', link: '/version' },
+  ],
+  locales: [['en-US', '英文'], ['zh-CN', '中文']],
 });

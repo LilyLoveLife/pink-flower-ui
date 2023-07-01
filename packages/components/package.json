@@ -1,7 +1,7 @@
 {
-  "name": "@pink-ui/components",
-  "public": true,
-  "version": "0.0.1",
+  "name": "@pink-flower-ui/components",
+  "version": "0.0.0",
+  "type": "module",
   "main": "./dist/lib/index.umd.cjs",
   "module": "./dist/es/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint-staged": "lint-staged",
     "test": "jest --no-cache",
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production pnpm build:components",
+    "build": "cross-env NODE_ENV=production pnpm run build:components",
     "build:components": "esno ./scripts/esBuild.ts",
     "build:all": "tsc && vite build",
     "preview": "vite preview",

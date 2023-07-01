@@ -1,6 +1,5 @@
 {
-  "name": "@pink-ui/examples",
-  "private": true,
+  "name": "@pink-flower-ui/examples",
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -10,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pink-ui/components": "workspace:^",
+    "@pink-flower-ui/components": "workspace:^",
     "babel-plugin-component": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

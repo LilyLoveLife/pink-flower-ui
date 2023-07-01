@@ -1,7 +1,7 @@
 ---
 hero:
-  title: Pink-UI
-  desc: Pink-UI文档
+  title: Pink-Flower-UI
+  desc: Pink-Flower-UI文档
   actions:
     - text: 快速上手
       link: /getting-started
@@ -18,4 +18,4 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## 你好!
+## 欢迎使用Pink-Flower-UI !

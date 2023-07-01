@@ -1,12 +1,12 @@
 ---
 hero:
-  title: Pink-UI
-  desc: Pink-UI document
+  title: Pink-Flower-UI
+  desc: Pink-Flower-UI document
   actions:
     - text: Getting Started
       link: /getting-started
     - text: Components
-      link: /button
+      link: /components/button
 features:
   - title: Hello
     emoji: 💎
@@ -20,3 +20,4 @@ features:
 # footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
+Welcom to use Pink-Flower-UI !

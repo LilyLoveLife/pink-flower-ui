@@ -1,11 +1,3 @@
-/*
- * @Author: Lily lily.song@hrtps.com
- * @Date: 2023-06-27 20:54:31
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-06-28 01:38:04
- * @FilePath: /theseus-cooperation/Users/hrtps/Documents/Projects/pink-ui/packages/components/jest.config.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 module.exports = {
   preset: "ts-jest",
   transform: {
