@@ -22,7 +22,7 @@ $ pnpm add pink-flower-ui --save
 
 ```tsx
 import React from 'react';
-import { Button } from '@pink-flower-ui/components';
+import { Button } from 'pink-flower-ui';
 
 const App = () => (
   <div className="App">

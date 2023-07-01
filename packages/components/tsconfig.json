@@ -4,12 +4,12 @@
     "paths": {
       "components": ["index.ts"],
       "components/es/*": ["*"],
-      "components/lib/*": ["*"],
+      "components/lib/*": ["*"]
       // "antd/locale/*": ["locale/*"]
     },
     // "types": "dist/index.d.ts",
-     "target": "ESNext",
-    //"target": "es6",
+    "target": "ESNext",
+    // "target": "es6",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -24,8 +24,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "declaration": true,
-    "declarationDir": "./dist/types",
+    "declaration": true
+    // "declarationDir": "./dist/types",
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

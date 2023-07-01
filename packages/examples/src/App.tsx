@@ -4,13 +4,13 @@
  * @Author: 
  * @Date: 2023-05-07 17:20:52
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-07-01 16:06:23
+ * @LastEditTime: 2023-07-02 00:30:02
  */
 import React , { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {Button, Select} from '@pink-flower-ui/components'
+import {Button, Select} from 'pink-flower-ui'
 function App() {
   const [count, setCount] = useState(0)
   const options = [

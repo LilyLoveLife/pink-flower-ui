@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "linked": [],
+  "linked": [["pink-flower-ui", "@pink-flower-ui/docs", "@pink-flower-ui/examples"]],
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",

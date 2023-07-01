@@ -1,7 +1,6 @@
 {
   "name": "@pink-flower-ui/docs",
-  "title": "pink-flower-ui",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
@@ -28,7 +27,7 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@pink-flower-ui/components": "workspace:^0.0.0",
+    "pink-flower-ui": "workspace:^",
     "react": "^18.2.0"
   }
 }

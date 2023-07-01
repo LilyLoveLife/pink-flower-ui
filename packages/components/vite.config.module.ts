@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2023-07-01 17:42:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-02 02:52:17
+ */
 
 import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -26,6 +34,10 @@ export type UserConfigWithOutDir = UserConfig & {build: TBuildType}
 // UserConfig & getBuildType<UserConfig>
 export const config = (moduleName: string) => {
     return {
+        resolve: {
+            // 忽略后缀名的配置选项, 添加 tsx. 选项时要记得原本默认忽略的选项也要手动写入
+            extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+        },
         plugins: [
             typescript({
                 rootDir: `./src/${moduleName}`, // 项目根目录，这里分模块打包，则根目录变成模块入口
@@ -62,6 +74,7 @@ export const config = (moduleName: string) => {
                         antd: 'antd'
                     },
                     extend: true,
+                    chunkFileNames: () => `${moduleName}.js`,
                     assetFileNames: () => 'index.css'
                 },
                 treeshake: {

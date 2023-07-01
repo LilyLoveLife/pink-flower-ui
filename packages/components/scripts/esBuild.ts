@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2023-07-01 17:42:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-02 03:45:38
+ */
 
 import fs from "fs-extra"
 import path from "path"
@@ -51,14 +59,19 @@ const buildAll = async () => {
         console.log('-moduleNames--', moduleNames)
         const indexContent: string = moduleNames.reduce((pre: string, cur: string) => {
             return `${pre}
-                    export { default as ${cur} } from './${cur}'
+                    export { default as ${cur} } from './${cur}/index.js'
                     `
         }, '')
         fs.outputFile(
-                path.resolve('./dist/es', `index.js`),
-                indexContent,
-                `utf-8`
-            );
+            path.resolve('./dist/es', `index.js`),
+            indexContent,
+            `utf-8`
+        );
+        fs.outputFile(
+            path.resolve('./dist/es', `index.d.ts`),
+            indexContent,
+            `utf-8`
+        );
 };
 
 buildAll();

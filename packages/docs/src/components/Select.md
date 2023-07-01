@@ -1,7 +1,8 @@
 
+
 ```jsx
 import React from 'react';
-import { Select } from '@pink-flower-ui/components';
+import { Select } from 'pink-flower-ui';
 export default () => {
   const options = [
     { key: 'option1', label: 'Option 1' },

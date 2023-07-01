@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2023-07-01 17:42:40
+ * @LastEditors: 
+ * @LastEditTime: 2023-07-02 01:56:00
+ */
 // import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
 
 // type UserConfigWithOutDir = UserConfig & 
@@ -37,3 +45,6 @@
 // git commit --no-verify -m "xxx"
 
 // "jest --bail --coverage --findRelatedTests"
+
+
+//   "type": "module",

@@ -2,7 +2,7 @@
 
 ```jsx
 import React from 'react';
-import { Button } from '@pink-flower-ui/components';
+import { Button } from 'pink-flower-ui';
 export default () => {
   return (
     <>

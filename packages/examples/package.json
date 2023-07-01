@@ -1,16 +1,16 @@
 {
   "name": "@pink-flower-ui/examples",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pink-flower-ui/components": "workspace:^",
     "babel-plugin-component": "^1.1.1",
+    "pink-flower-ui": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
