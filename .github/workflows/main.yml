@@ -53,11 +53,11 @@ jobs:
         run: |
           echo $(pwd)
           father_file="/home/runner/work/pink-flower-ui"
-          for dir in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui/)
+          for dir in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui/packages)
           do
             [ -d $dir ] && echo $dir
           done
-          pnpm changeset publish
+          pnpm publish -r
         env:
           # 刚刚设置的 NPM_TOKEN
           NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
