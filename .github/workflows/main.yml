@@ -45,6 +45,7 @@ jobs:
         with:
           # 指定密钥，即在github项目的Settings中设置的
           ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           # 指定推送到的远程分支
           BRANCH: master
           # 指定构建之后的产物要推送哪个目录的代码
