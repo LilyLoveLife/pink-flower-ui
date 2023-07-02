@@ -1,4 +1,4 @@
-name: Docs Package
+name: release2
 
 # 触发工作流程的事件
 on:
