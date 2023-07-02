@@ -1,5 +1,14 @@
 # @pink-flower-ui/docs
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [08c238b]
+- Updated dependencies [436e52c]
+- Updated dependencies [85db932]
+  - pink-flower-ui@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes
