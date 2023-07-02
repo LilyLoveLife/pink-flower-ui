@@ -44,6 +44,10 @@ jobs:
         run: |
           echo $(pwd)
           father_file="/home/runner/work/pink-flower-ui"
+          for dir1 in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui)
+          do
+            [ -d $dir1 ] && echo $dir1
+          done
           for dir in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui/packages)
           do
             [ -d $dir ] && echo $dir
