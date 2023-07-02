@@ -4,7 +4,7 @@ name: Component Package
 on:
   push:
     branches:
-      - releases
+      - release
 # 按顺序运行作业
 jobs:
   publish-gpr:
