@@ -48,12 +48,12 @@ jobs:
           # 指定推送到的远程分支
           BRANCH: master
           # 指定构建之后的产物要推送哪个目录的代码
-          FOLDER: ./packages/components/dist
+          FOLDER: ./
       - name: 发布
         run: |
           echo $(pwd)
           father_file="/home/runner/work/pink-flower-ui"
-          for dir in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui/)
+          for dir in $(ls /home/runner/work/pink-flower-ui/pink-flower-ui/packages)
           do
             [ -d $dir ] && echo $dir
           done
