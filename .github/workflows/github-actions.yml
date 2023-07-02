@@ -50,4 +50,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
       - name: 发布
         if: steps.changesets.outputs.hasChangesets == 'false' # && steps.changesets.outputs.published !== 'true'
-        run: pnpm ci:publish
+        run: pnpm changeset publish

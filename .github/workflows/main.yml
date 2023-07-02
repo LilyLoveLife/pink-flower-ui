@@ -49,7 +49,7 @@ jobs:
           # 指定推送到的远程分支
           BRANCH: master
           # 指定构建之后的产物要推送哪个目录的代码
-          FOLDER: echo $(pwd)
+          FOLDER: $(cd $(dirname $0); pwd)
       - name: 发布
         run: |
           echo $(pwd)
