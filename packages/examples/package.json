@@ -1,6 +1,6 @@
 {
   "name": "@pink-flower-ui/examples",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "start": "vite",
