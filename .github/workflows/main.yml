@@ -14,9 +14,13 @@ jobs:
     strategy:
       matrix:
         node-version: [16]
+        pnpm-version: [8]
     steps:
       # 拉取 github 仓库代码
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ matrix.pnpm-version }}
       # 设定 node 环境
       - uses: actions/setup-node@v3
         with:
@@ -26,9 +30,7 @@ jobs:
           cache: 'pnpm'
       # 安装依赖，相当于 npm ci
       - name: Install dependencies
-        run: |
-          npm install pnpm
-          pnpm install
+        run: pnpm install
       # 执行构建步骤
       - name: 构建
         run: |
