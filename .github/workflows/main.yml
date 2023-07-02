@@ -51,7 +51,7 @@ jobs:
       - name: 发布
         run: |
           echo $(pwd)
-          father_file="/home/runner/work/pink-flower-ui/pink-flower-ui"
+          father_file="/home/runner/work/pink-flower-ui"
           for file in ${father_file}*
           do
             echo ${file}
