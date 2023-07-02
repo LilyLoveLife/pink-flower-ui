@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Docs Package
 
 # 触发工作流程的事件
 on:
