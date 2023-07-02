@@ -1,4 +1,4 @@
-name: Component Package
+name: release1
 
 # 触发工作流程的事件
 on:
