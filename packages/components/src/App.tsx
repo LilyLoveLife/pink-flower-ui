@@ -1,3 +1,11 @@
+/*
+ * @Description:
+ * @version:
+ * @Author:
+ * @Date: 2023-07-01 17:42:40
+ * @LastEditors:
+ * @LastEditTime: 2023-07-02 16:09:55
+ */
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "../../../../../../../../vite.svg";
@@ -5,8 +13,8 @@ import "./App.css";
 import Button from "./Button";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  console.log(111);
+  const [count, setCount] = useState(1);
+  console.log(111111);
   return (
     <div className="App">
       <div>

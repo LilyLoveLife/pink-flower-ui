@@ -1,4 +1,4 @@
-name: Docs Package
+name: Component Package
 
 # 触发工作流程的事件
 on:
