@@ -3,8 +3,8 @@
  * @version: 
  * @Author: 
  * @Date: 2023-07-01 17:42:40
- * @LastEditors: 
- * @LastEditTime: 2023-07-02 01:56:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-02 18:02:44
  */
 // import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
 
@@ -48,3 +48,4 @@
 
 
 //   "type": "module",
+
