@@ -9,6 +9,7 @@
     "preinstall": "npx only-allow pnpm",
     "lint-staged": "lint-staged",
     "test": "jest --no-cache",
+    "commit": "git-cz",
     "dev": "vite",
     "build": "cross-env NODE_ENV=production pnpm run build:components",
     "build:components": "esno ./scripts/esBuild.ts",
@@ -77,7 +78,10 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
+      "path": "packages/components/node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
     }
   },
   "lint-staged": {
