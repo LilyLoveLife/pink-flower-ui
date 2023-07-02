@@ -47,7 +47,7 @@ jobs:
           # 指定推送到的远程分支
           BRANCH: master
           # 指定构建之后的产物要推送哪个目录的代码
-          #FOLDER: ./packages/components/dist
+          FOLDER: ./packages/components/dist
       - run: pnpm changeset publish
         env:
           # 刚刚设置的 NPM_TOKEN
