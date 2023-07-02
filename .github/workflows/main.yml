@@ -26,7 +26,9 @@ jobs:
           cache: 'pnpm'
       # 安装依赖，相当于 npm ci
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          npm install pnpm
+          pnpm install
       # 执行构建步骤
       - name: 构建
         run: |
