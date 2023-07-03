@@ -1,6 +1,6 @@
 {
   "name": "@pink-flower-ui/docs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
