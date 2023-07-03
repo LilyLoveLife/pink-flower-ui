@@ -1,5 +1,11 @@
 # @pink-flower-ui/examples
 
+## 1.0.0
+
+### Major Changes
+
+- d58cbb5: first version of test_docs
+
 ## 0.0.7
 
 ### Patch Changes
