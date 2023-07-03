@@ -5,7 +5,7 @@
   "fixed": [],
   "linked": [["pink-flower-ui", "@pink-flower-ui/docs", "@pink-flower-ui/examples"]],
   "access": "public",
-  "baseBranch": "master",
+  "baseBranch": "release",
   "updateInternalDependencies": "patch",
   "ignore": []
 }
