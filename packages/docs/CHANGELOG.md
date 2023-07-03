@@ -1,5 +1,11 @@
 # @pink-flower-ui/docs
 
+## 0.0.8
+
+### Patch Changes
+
+- 537a8b2: yml
+
 ## 0.0.7
 
 ### Patch Changes
