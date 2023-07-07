@@ -1,3 +1,4 @@
+
 import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import { visualizer } from "rollup-plugin-visualizer"
@@ -55,6 +56,7 @@ export const config: UserConfigWithOutDir = {
       // fileName: 'pink-ui',
       fileName: 'index',
     },
+    assetsInlineLimit: 0, // kb
     rollupOptions: {    
       external: ['react', 'react-dom', 'classnames', 'antd'],
       output: {
@@ -67,7 +69,8 @@ export const config: UserConfigWithOutDir = {
           antd: 'antd'
         },
         extend: true,
-        assetFileNames: () => 'index.css'
+        // assetFileNames: './dist/[name]-[hash][extname]'
+        // assetFileNames: () => 'index.css'
       },
       treeshake: {
         moduleSideEffects: [

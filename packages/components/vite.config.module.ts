@@ -3,8 +3,8 @@
  * @version: 
  * @Author: 
  * @Date: 2023-07-01 17:42:40
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-07-02 02:52:17
+ * @LastEditors: Lily lily.song@hrtps.com
+ * @LastEditTime: 2023-07-07 10:26:49
  */
 
 import { defineConfig, UserConfigExport, UserConfig, BuildOptions, type PluginOption } from 'vite'
@@ -18,6 +18,7 @@ import typescript from '@rollup/plugin-typescript'
 import path from "path"
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'node:path'
+import copyPlugin from 'rollup-plugin-copy'
 // 获取 __filename 的 ESM 写法
 const __filename = fileURLToPath(import.meta.url)
 // 获取 __dirname 的 ESM 写法
@@ -62,6 +63,7 @@ export const config = (moduleName: string) => {
                 fileName: `index`,
                 formats: [`es`],
             },
+            assetsInlineLimit: 0, // kb
             rollupOptions: {    
                 external: ['react', 'react-dom', 'classnames', 'antd'],
                 output: {
@@ -75,7 +77,9 @@ export const config = (moduleName: string) => {
                     },
                     extend: true,
                     chunkFileNames: () => `${moduleName}.js`,
-                    assetFileNames: () => 'index.css'
+                    // assetFileNames: () => `assets/[name]-[hash][extname]`
+                    // assetFileNames: () => 'index.css',
+                    // assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
                 },
                 treeshake: {
                     moduleSideEffects: [
@@ -88,6 +92,9 @@ export const config = (moduleName: string) => {
                     ]
                 },
                 plugins: [
+                    // copyPlugin({
+                    //     targets: [{ src: 'src/assets/*', dest: 'dist/img' }],
+                    // })
                     // typescript({}),
 
                     // outDir:'./dist/types',
